@@ -54,3 +54,7 @@ def CNN_model(X_train, Y_train, X_test, Y_test):
 
     total_time = time.time() - start_time
     print(f"Total training time: {total_time:.2f} seconds.")
+    # Evaluate the model
+    final_loss, final_accuracy = model.evaluate(X_test, Y_test)
+    print(f"Final accuracy: {final_accuracy:.4f}")
+    return final_accuracy
